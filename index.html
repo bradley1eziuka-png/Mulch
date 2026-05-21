@@ -837,6 +837,65 @@
       .payment-terms { flex-direction: column; gap: 0.625rem; }
     }
 
+    /* ── Before / After ─────────────────────────────────────── */
+    #results { background: var(--green-deep); }
+    #results .section-header { border-top-color: rgba(255,255,255,0.15); }
+    #results .label { color: rgba(255,255,255,0.4); }
+    #results .section-title { color: var(--white); }
+
+    .ba-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .ba-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ba-card img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .ba-card:hover img { transform: scale(1.03); }
+
+    .ba-label {
+      position: absolute;
+      top: 1.25rem;
+      left: 1.25rem;
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 0.875rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 0.375rem 0.875rem;
+      color: var(--white);
+    }
+    .ba-label.before { background: rgba(0,0,0,0.55); }
+    .ba-label.after  { background: var(--orange); }
+
+    .ba-caption {
+      margin-top: 1.5rem;
+      text-align: center;
+      font-size: 0.9375rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.65;
+    }
+    .ba-caption strong {
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      .ba-grid { grid-template-columns: 1fr; }
+      .ba-card img { height: 300px; }
+    }
+
     /* ── Sticky Mobile Call Button ───────────────────────────── */
     .sticky-call-btn {
       display: none;
@@ -1052,6 +1111,35 @@
         </div>
       </div>
 
+    </div>
+  </section>
+
+
+  <!-- ══ BEFORE / AFTER ═══════════════════════════════════════ -->
+  <section id="results" class="section" aria-label="Before and After">
+    <div class="section-inner">
+      <div class="section-header dark-border">
+        <span class="label">Real Results</span>
+        <span class="label">Kalamazoo, MI</span>
+      </div>
+
+      <div class="ba-grid">
+
+        <div class="ba-card">
+          <img src="Before.jpeg" alt="Garden bed before mulch installation — old, worn mulch" />
+          <span class="ba-label before">Before</span>
+        </div>
+
+        <div class="ba-card">
+          <img src="After.jpeg" alt="Garden bed after mulch installation — fresh, rich dark brown mulch" />
+          <span class="ba-label after">After</span>
+        </div>
+
+      </div>
+
+      <p class="ba-caption">
+        <strong>Same yard. Same beds.</strong> Fresh dark brown mulch, installed in one visit. This is what we do.
+      </p>
     </div>
   </section>
 
