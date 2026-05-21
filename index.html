@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>K College Mulch | Home Focused. Community Rooted.</title>
+  <meta name="description" content="K College Mulch provides full-service residential mulching in Kalamazoo, Michigan. Free phone consultation, same-day installation available. $100/cu yd all-inclusive: mulch, delivery, and installation combined." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;600;700;800;900&family=Epilogue:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root {
+      --green:        #2C6E2C;
+      --green-dark:   #1D4D20;
+      --green-deep:   #112D14;
+      --orange:       #E8621A;
+      --orange-dark:  #C4511280;
+      --orange-solid: #C45112;
+      --cream:        #F4F1EB;
+      --off-white:    #FAFAF7;
+      --border:       #D6D2C9;
+      --muted:        #6A7A6A;
+      --text:         #1A281C;
+      --white:        #FFFFFF;
+      --font-display: 'Big Shoulders Display', sans-serif;
+      --font-body:    'Epilogue', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      background-color: var(--white);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Typography ─────────────────────────────────────────── */
+    .display {
+      font-family: var(--font-display);
+      font-weight: 900;
+      line-height: 0.92;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+    }
+
+    .heading {
+      font-family: var(--font-display);
+      font-weight: 700;
+      line-height: 1.05;
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+    }
+
+    .label {
+      font-family: var(--font-body);
+      font-size: 0.6875rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* ── Buttons ─────────────────────────────────────────────── */
+    .btn-orange {
+      display: inline-block;
+      background: var(--orange);
+      color: var(--white);
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.875rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 0.75rem 1.875rem;
+      text-decoration: none;
+      transition: background 0.15s ease;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-orange:hover { background: var(--orange-solid); }
+
+    .btn-green {
+      display: inline-block;
+      background: var(--green);
+      color: var(--white);
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.875rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 0.75rem 1.875rem;
+      text-decoration: none;
+      transition: background 0.15s ease;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-green:hover { background: var(--green-dark); }
+
+    .btn-outline-white {
+      display: inline-block;
+      background: transparent;
+      color: var(--white);
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.875rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 0.75rem 1.875rem;
+      border: 2px solid rgba(255,255,255,0.35);
+      text-decoration: none;
+      transition: border-color 0.15s ease, background 0.15s ease;
+    }
+    .btn-outline-white:hover {
+      border-color: var(--white);
+      background: rgba(255,255,255,0.06);
+    }
+
+    /* ── Nav ─────────────────────────────────────────────────── */
+    #navbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.375rem;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      color: var(--text);
+      text-decoration: none;
+    }
+    @media (max-width: 768px) {
+      .nav-inner { height: 72px; }
+      .nav-logo { font-size: 1.125rem; }
+    }
+
+    /* ── Hero ────────────────────────────────────────────────── */
+    #hero {
+      background: var(--green-dark);
+      color: var(--white);
+      min-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 5rem 2rem 5.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Subtle geometric texture layer — echoes the diagonal flyer shapes */
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 75% 20%, rgba(232,98,26,0.18) 0%, transparent 55%),
+        linear-gradient(160deg, var(--green-deep) 0%, var(--green-dark) 55%, #2C6E2C 100%);
+      pointer-events: none;
+    }
+    #hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 45%;
+      height: 100%;
+      background: rgba(255,255,255,0.025);
+      clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+      position: relative;
+      z-index: 1;
+    }
+
+    .availability-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.625rem;
+      background: var(--orange);
+      border: none;
+      padding: 0.5rem 1.125rem;
+      border-radius: 0;
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 1.75rem;
+      width: fit-content;
+    }
+    .availability-pill .dot {
+      width: 7px;
+      height: 7px;
+      background: var(--white);
+      border-radius: 50%;
+      flex-shrink: 0;
+      animation: blink 2s ease-in-out infinite;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    .hero-eyebrow {
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-headline {
+      font-size: clamp(3.75rem, 9.5vw, 9rem);
+      margin-bottom: 1.5rem;
+      max-width: 14ch;
+      color: var(--white);
+    }
+    .hero-headline .accent { color: var(--orange); }
+
+    .hero-sub {
+      font-size: 1.0625rem;
+      line-height: 1.65;
+      color: rgba(255,255,255,0.65);
+      max-width: 46ch;
+      margin-bottom: 0.875rem;
+    }
+
+    .hero-phone {
+      font-family: var(--font-display);
+      font-size: clamp(1.875rem, 4.5vw, 3rem);
+      font-weight: 900;
+      color: var(--orange);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      display: block;
+      margin-bottom: 2rem;
+      transition: opacity 0.15s ease;
+    }
+    .hero-phone:hover { opacity: 0.82; }
+
+    .hero-ctas {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .free-note {
+      font-size: 0.8125rem;
+      color: rgba(255,255,255,0.4);
+      margin-top: 1rem;
+      letter-spacing: 0.02em;
+    }
+
+    /* ── Section shell ───────────────────────────────────────── */
+    .section {
+      padding: 6rem 2rem;
+    }
+    .section-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      border-top: 1px solid var(--border);
+      padding-top: 1.25rem;
+      margin-bottom: 3.5rem;
+    }
+    .section-header.dark-border {
+      border-top-color: rgba(255,255,255,0.15);
+    }
+    .section-title {
+      font-size: clamp(2rem, 4vw, 2.75rem);
+    }
+
+    /* ── Why K College Mulch ─────────────────────────────────── */
+    #why { background: var(--cream); }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+    }
+    .why-grid + .why-grid { margin-top: 0; }
+
+    .why-card {
+      padding: 2.5rem 2.5rem 2.5rem 0;
+      border-top: 3px solid var(--green);
+    }
+    .why-card + .why-card {
+      padding-left: 2.5rem;
+      border-left: 1px solid var(--border);
+    }
+
+    .why-icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      background: var(--green);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+      flex-shrink: 0;
+    }
+    .why-icon svg {
+      width: 1.125rem;
+      height: 1.125rem;
+    }
+
+    .why-title {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+    .why-desc {
+      font-size: 0.9375rem;
+      line-height: 1.65;
+      color: var(--muted);
+    }
+
+    /* Free badge inside why section */
+    .free-badge {
+      display: inline-block;
+      background: var(--orange);
+      color: var(--white);
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.625rem;
+      margin-bottom: 1rem;
+    }
+
+    /* ── Process ─────────────────────────────────────────────── */
+    #process { background: var(--white); }
+
+    .process-step {
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      gap: 2rem;
+      padding: 2rem 0;
+      border-top: 1px solid var(--border);
+      align-items: start;
+    }
+    .process-step:last-child {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .step-num {
+      font-family: var(--font-display);
+      font-size: 3.25rem;
+      font-weight: 900;
+      color: var(--orange);
+      line-height: 1;
+      padding-top: 0.125rem;
+    }
+
+    .step-title {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .step-desc {
+      font-size: 0.9375rem;
+      line-height: 1.65;
+      color: var(--muted);
+    }
+
+    /* ── Pricing ─────────────────────────────────────────────── */
+    #pricing {
+      background: var(--green-dark);
+      color: var(--white);
+    }
+    #pricing .label { color: rgba(255,255,255,0.4); }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .price-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 2.5rem;
+    }
+    .price-card.featured {
+      background: var(--orange);
+      border-color: var(--orange);
+    }
+
+    .price-card-eyebrow {
+      font-size: 0.6875rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 1rem;
+    }
+    .price-card.featured .price-card-eyebrow { color: rgba(255,255,255,0.75); }
+
+    .price-amount {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 5.5vw, 4.5rem);
+      font-weight: 900;
+      line-height: 1;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+
+    .price-unit {
+      font-size: 1rem;
+      font-weight: 400;
+      color: rgba(255,255,255,0.6);
+      font-family: var(--font-body);
+      text-transform: none;
+      letter-spacing: 0;
+    }
+
+    .price-desc {
+      font-size: 0.9375rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.6;
+      margin: 1rem 0 1.5rem;
+    }
+    .price-card.featured .price-desc { color: rgba(255,255,255,0.85); }
+
+    .price-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.625rem;
+    }
+    .price-list li {
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.7);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.625rem;
+      line-height: 1.5;
+    }
+    .price-list li svg {
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .price-example {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 2rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .price-example-label {
+      font-size: 0.6875rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 0.375rem;
+    }
+    .price-example-calc {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.75);
+    }
+    .price-example-calc strong { color: var(--white); font-weight: 600; }
+    .price-example-total {
+      font-family: var(--font-display);
+      font-size: clamp(2.25rem, 5vw, 3.5rem);
+      font-weight: 900;
+      color: var(--orange);
+      white-space: nowrap;
+      line-height: 1;
+    }
+
+    .payment-terms {
+      margin-top: 1.25rem;
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .payment-term {
+      font-size: 0.8125rem;
+      color: rgba(255,255,255,0.4);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .payment-term::before {
+      content: '';
+      display: block;
+      width: 6px;
+      height: 6px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50%;
+    }
+
+    /* ── Mulch Options ───────────────────────────────────────── */
+    #mulch { background: var(--cream); }
+
+    .mulch-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .mulch-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .mulch-swatch {
+      height: 160px;
+      position: relative;
+    }
+    .mulch-swatch.red {
+      background: linear-gradient(160deg, #8B2C14 0%, #A83B22 45%, #6A200E 100%);
+    }
+    .mulch-swatch.black {
+      background: linear-gradient(160deg, #1C1C1C 0%, #2E2E2E 45%, #0D0D0D 100%);
+    }
+    .mulch-swatch.brown {
+      background: linear-gradient(160deg, #5C3D1E 0%, #7A5032 45%, #422C12 100%);
+    }
+
+    /* Subtle texture stripes to simulate mulch texture */
+    .mulch-swatch::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 8px,
+        rgba(0,0,0,0.08) 8px,
+        rgba(0,0,0,0.08) 9px
+      );
+    }
+
+    .mulch-card-body { padding: 1.5rem 1.75rem; }
+    .mulch-card-title {
+      font-size: 1.375rem;
+      margin-bottom: 0.375rem;
+    }
+    .mulch-card-desc {
+      font-size: 0.875rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* ── Testimonial ─────────────────────────────────────────── */
+    #testimonial {
+      background: var(--green-deep);
+      color: var(--white);
+    }
+    .testimonial-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .quote-mark {
+      font-family: var(--font-display);
+      font-size: 6rem;
+      line-height: 0.7;
+      color: rgba(255,255,255,0.08);
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+    .testimonial-text {
+      font-size: clamp(1.1875rem, 2.25vw, 1.625rem);
+      font-weight: 500;
+      line-height: 1.55;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 2.5rem;
+    }
+    .testimonial-attr {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .attr-line {
+      width: 2rem;
+      height: 1px;
+      background: rgba(255,255,255,0.18);
+    }
+    .attr-name {
+      font-weight: 600;
+      font-size: 0.875rem;
+      letter-spacing: 0.03em;
+    }
+    .attr-meta {
+      font-size: 0.8125rem;
+      color: rgba(255,255,255,0.38);
+      margin-top: 0.2rem;
+    }
+
+    /* ── CTA Banner ──────────────────────────────────────────── */
+    #cta-banner {
+      background: var(--orange);
+      padding: 4rem 2rem;
+    }
+    .cta-banner-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+    }
+    .cta-banner-left {}
+    .cta-banner-left h2 {
+      font-size: clamp(1.875rem, 3.5vw, 2.625rem);
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+    .cta-banner-left p {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.8);
+    }
+    .cta-banner-phone {
+      font-family: var(--font-display);
+      font-size: clamp(2.25rem, 4.5vw, 3.25rem);
+      font-weight: 900;
+      color: var(--white);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: opacity 0.15s ease;
+      white-space: nowrap;
+    }
+    .cta-banner-phone:hover { opacity: 0.82; }
+
+    /* ── Contact ─────────────────────────────────────────────── */
+    #contact { background: var(--white); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .contact-info-head {
+      font-size: clamp(1.75rem, 3vw, 2.375rem);
+      margin-bottom: 1rem;
+    }
+    .contact-info-body {
+      font-size: 0.9375rem;
+      line-height: 1.7;
+      color: var(--muted);
+      margin-bottom: 2.25rem;
+    }
+    .contact-detail {
+      display: flex;
+      flex-direction: column;
+      gap: 1.375rem;
+    }
+    .contact-detail-item { display: flex; flex-direction: column; gap: 0.2rem; }
+    .contact-detail-item .label { color: var(--muted); margin-bottom: 0.1rem; }
+    .contact-phone-big {
+      font-family: var(--font-display);
+      font-size: 2.125rem;
+      font-weight: 900;
+      color: var(--green);
+      text-decoration: none;
+      display: block;
+      letter-spacing: 0.01em;
+      transition: color 0.15s ease;
+    }
+    .contact-phone-big:hover { color: var(--orange); }
+    .contact-detail-item span {
+      font-size: 0.9375rem;
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    /* Form */
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.375rem;
+      margin-bottom: 1.25rem;
+    }
+    .form-group:last-of-type { margin-bottom: 1.75rem; }
+    .form-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text);
+    }
+    .form-label .optional {
+      font-weight: 400;
+      letter-spacing: 0;
+      text-transform: none;
+      color: var(--muted);
+      margin-left: 0.35rem;
+    }
+    .form-control {
+      width: 100%;
+      border: none;
+      border-bottom: 1.5px solid var(--border);
+      padding: 0.625rem 0;
+      font-family: var(--font-body);
+      font-size: 0.9375rem;
+      color: var(--text);
+      background: transparent;
+      outline: none;
+      transition: border-color 0.15s ease;
+      border-radius: 0;
+      -webkit-appearance: none;
+    }
+    .form-control::placeholder { color: #C2BEB7; }
+    .form-control:focus { border-bottom-color: var(--green); }
+    textarea.form-control {
+      resize: none;
+      min-height: 110px;
+    }
+
+    /* ── Footer ──────────────────────────────────────────────── */
+    footer {
+      background: var(--green-deep);
+      color: rgba(255,255,255,0.4);
+      padding: 3rem 2rem;
+    }
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .footer-logo {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.125rem;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      color: var(--white);
+      text-decoration: none;
+      opacity: 0.8;
+    }
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      font-size: 0.8125rem;
+      color: rgba(255,255,255,0.38);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: color 0.15s ease;
+    }
+    .footer-links a:hover { color: rgba(255,255,255,0.8); }
+    .footer-copy { font-size: 0.75rem; color: rgba(255,255,255,0.2); }
+
+    /* ── Mobile ──────────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .pricing-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .section { padding: 4rem 1.25rem; }
+      #hero { padding: 3.5rem 1.25rem 4.5rem; min-height: 82vh; }
+
+      .why-grid { grid-template-columns: 1fr; }
+      .why-card {
+        padding: 2rem 0;
+        border-left: none !important;
+        padding-left: 0 !important;
+      }
+
+      .process-step {
+        grid-template-columns: 56px 1fr;
+        gap: 1.25rem;
+      }
+
+      .mulch-grid { grid-template-columns: 1fr; }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      .form-row { grid-template-columns: 1fr; }
+
+      .price-example {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25rem;
+      }
+
+      .cta-banner-inner { flex-direction: column; }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-ctas { flex-direction: column; align-items: flex-start; }
+      .nav-inner { padding: 0 1.25rem; }
+      .payment-terms { flex-direction: column; gap: 0.625rem; }
+    }
+
+    /* ── Sticky Mobile Call Button ───────────────────────────── */
+    .sticky-call-btn {
+      display: none;
+    }
+    @media (max-width: 768px) {
+      .sticky-call-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.625rem;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        background: var(--orange);
+        color: var(--white);
+        font-family: var(--font-body);
+        font-weight: 700;
+        font-size: 1rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1rem 1.5rem;
+        border-top: 2px solid var(--orange-solid);
+        transition: background 0.15s ease;
+      }
+      .sticky-call-btn:hover,
+      .sticky-call-btn:active { background: var(--orange-solid); }
+      .sticky-call-btn svg {
+        width: 1.125rem;
+        height: 1.125rem;
+        flex-shrink: 0;
+      }
+      /* Prevent the sticky bar from covering the contact form submit button */
+      body { padding-bottom: 60px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ══ NAV ════════════════════════════════════════════════════ -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo" aria-label="K College Mulch home">K College Mulch</a>
+      <a href="#contact" class="btn-orange">Book Free Consultation</a>
+    </div>
+  </nav>
+
+
+  <!-- ══ HERO ══════════════════════════════════════════════════ -->
+  <section id="hero" aria-label="Hero">
+    <div class="hero-inner">
+      <div class="availability-pill">
+        <span class="dot"></span>
+        Limited Spring Availability
+      </div>
+      <p class="label hero-eyebrow">Kalamazoo, Michigan &nbsp;·&nbsp; Residential Mulching</p>
+      <h1 class="display hero-headline">
+        Fresh Mulch.<br>
+        <span class="accent">Installed.</span><br>
+        You Do Nothing.
+      </h1>
+      <p class="hero-sub">
+        We calculate your yardage, order, deliver, and install. All for one flat price. No scheduling hassle, no big-company markup.
+      </p>
+      <a href="tel:2487672479" class="hero-phone">(248) 767-2479</a>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn-orange">Get My Free Estimate</a>
+        <a href="#process" class="btn-outline-white">See How It Works</a>
+      </div>
+      <p class="free-note">Free phone consultation, no obligation</p>
+    </div>
+  </section>
+
+
+  <!-- ══ WHY K COLLEGE MULCH ════════════════════════════════════ -->
+  <section id="why" class="section" aria-label="Why K College Mulch">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="label">Why K College Mulch</span>
+        <span class="label">Kalamazoo, MI</span>
+      </div>
+
+      <div class="why-grid">
+
+        <div class="why-card">
+          <div class="free-badge">Free</div>
+          <div class="why-icon" aria-hidden="true">
+            <!-- Phone icon -->
+            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.5 3C6.5 3 5 4 5 6.5C5 12.299 7.701 15 13.5 15C16 15 17 13.5 17 13.5L14.5 11L13 12.5C13 12.5 10.5 12 8 9.5C5.5 7 5 4.5 5 4.5L6.5 3Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="heading why-title">Free Phone Consultation</h3>
+          <p class="why-desc">Call us and we walk through your beds together, calculate the exact yardage you need, and give you a custom quote. No charge, no obligation.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon" aria-hidden="true">
+            <!-- Checkmark icon -->
+            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 10.5L8 14.5L16 6.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="heading why-title">Full-Service, Top to Bottom</h3>
+          <p class="why-desc">We handle everything: yardage calculation, ordering, delivery, and installation. You don't lift a finger or make a single extra call. One contact, one price, done.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon" aria-hidden="true">
+            <!-- Clock icon -->
+            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="10" cy="10" r="7.5" stroke="white" stroke-width="1.5"/>
+              <path d="M10 6.5V10L12.5 12.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="heading why-title">Same-Day Installation</h3>
+          <p class="why-desc">Need it done fast? We offer same-day service for qualifying jobs. Spring schedules fill quickly. Call early to lock in your preferred date.</p>
+        </div>
+
+      </div>
+
+      <div class="why-grid" style="border-top: 1px solid var(--border); margin-top: 0;">
+
+        <div class="why-card" style="border-top: none;">
+          <div class="why-icon" aria-hidden="true">
+            <!-- Palette/options icon -->
+            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="7" cy="7" r="2" stroke="white" stroke-width="1.5"/>
+              <circle cx="13" cy="7" r="2" stroke="white" stroke-width="1.5"/>
+              <circle cx="10" cy="13" r="2" stroke="white" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <h3 class="heading why-title">Your Choice of Mulch</h3>
+          <p class="why-desc">Red, Black, or Brown. Pick the color that fits your home. Same flat rate regardless of which you choose. We bring what you want.</p>
+        </div>
+
+        <div class="why-card" style="border-top: none;">
+          <div class="why-icon" aria-hidden="true">
+            <!-- Star/check icon -->
+            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 10.5L8 14.5L16 6.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="heading why-title">Post-Service Check-In</h3>
+          <p class="why-desc">We follow up after every job. If anything isn't right, we make it right. That's not a policy. It's just how we work with every homeowner we serve.</p>
+        </div>
+
+        <div class="why-card" style="border-top: none;">
+          <div class="why-icon" aria-hidden="true">
+            <!-- Tag/price icon -->
+            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.5 3H16.5V9L10 15.5L4.5 10L10.5 3Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="13.5" cy="6.5" r="1" fill="white"/>
+            </svg>
+          </div>
+          <h3 class="heading why-title">No Big-Company Markup</h3>
+          <p class="why-desc">We source through local suppliers and pass those savings to you. You get competitive pricing without the franchise overhead baked into the bill.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══ HOW IT WORKS ═══════════════════════════════════════════ -->
+  <section id="process" class="section" aria-label="How It Works">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="label">How It Works</span>
+        <span class="label">5 Simple Steps</span>
+      </div>
+
+      <div class="process-step">
+        <div class="step-num">01</div>
+        <div>
+          <h3 class="heading step-title">We Assess Your Beds</h3>
+          <p class="step-desc">During your free phone consultation, we calculate the exact yardage your beds need. No guessing, no over-ordering, no wasted material.</p>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <div class="step-num">02</div>
+        <div>
+          <h3 class="heading step-title">One Price, No Surprises</h3>
+          <p class="step-desc">You get a single all-in number: mulch, delivery, and installation combined. No line-item additions on the day of service.</p>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <div class="step-num">03</div>
+        <div>
+          <h3 class="heading step-title">We Order and Schedule Delivery</h3>
+          <p class="step-desc">We coordinate the mulch order and schedule delivery directly to your home. You don't touch the logistics. We handle every step.</p>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <div class="step-num">04</div>
+        <div>
+          <h3 class="heading step-title">We Install and Clean Up</h3>
+          <p class="step-desc">Our team installs the mulch and leaves your yard clean. No piles sitting in your driveway, no cleanup left for you when we're done.</p>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <div class="step-num">05</div>
+        <div>
+          <h3 class="heading step-title">Pay the Remaining Balance When It's Done</h3>
+          <p class="step-desc">50% is due at booking to lock in your date. You pay the remaining 50% only after the job is complete and you're satisfied with the result.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ══ PRICING ════════════════════════════════════════════════ -->
+  <section id="pricing" class="section" aria-label="Pricing">
+    <div class="section-inner">
+      <div class="section-header dark-border">
+        <span class="label">Pricing</span>
+        <span class="label">Transparent &amp; All-In</span>
+      </div>
+
+      <div class="pricing-grid">
+
+        <div class="price-card">
+          <div class="price-card-eyebrow">Booking Fee</div>
+          <div class="price-amount">$75</div>
+          <p class="price-desc">Due at booking to reserve your install date. This is applied toward your total, not an additional charge on top of the job.</p>
+          <ul class="price-list">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="white" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Locks in your date
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="white" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Covers scheduling and logistics
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="white" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Applied to your final balance
+            </li>
+          </ul>
+        </div>
+
+        <div class="price-card featured">
+          <div class="price-card-eyebrow">Per Cubic Yard</div>
+          <div class="price-amount">$100 <span class="price-unit">/ cu yd</span></div>
+          <p class="price-desc">One flat rate, all-inclusive. Mulch, delivery, and installation. No add-ons, no hidden fees, no surprises.</p>
+          <ul class="price-list">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="white" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Mulch included (Red, Black, or Brown)
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="white" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Delivery to your home included
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="white" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Full installation included
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="white" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Site cleanup included
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="price-example">
+        <div>
+          <div class="price-example-label">Pricing Example</div>
+          <div class="price-example-calc">
+            <strong>Typical 6-yard job</strong> &nbsp;·&nbsp; $75 booking fee + (6 × $100/yd)
+          </div>
+        </div>
+        <div class="price-example-total">$675 total</div>
+      </div>
+
+      <div class="payment-terms">
+        <span class="payment-term">50% due at booking to lock in your date</span>
+        <span class="payment-term">50% due on completion, after you're satisfied</span>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ══ MULCH OPTIONS ══════════════════════════════════════════ -->
+  <section id="mulch" class="section" aria-label="Mulch Color Options">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="label">Mulch Options</span>
+        <span class="label">Choose Your Color</span>
+      </div>
+      <div class="mulch-grid">
+
+        <div class="mulch-card">
+          <div class="mulch-swatch red" aria-label="Red mulch color preview"></div>
+          <div class="mulch-card-body">
+            <h3 class="heading mulch-card-title">Red Mulch</h3>
+            <p class="mulch-card-desc">A bold, warm tone that makes garden beds pop against green foliage. A popular choice for front-yard curb appeal.</p>
+          </div>
+        </div>
+
+        <div class="mulch-card">
+          <div class="mulch-swatch black" aria-label="Black mulch color preview"></div>
+          <div class="mulch-card-body">
+            <h3 class="heading mulch-card-title">Black Mulch</h3>
+            <p class="mulch-card-desc">Clean, modern contrast that works with any home exterior. Sets off plants and gives beds a finished, polished look.</p>
+          </div>
+        </div>
+
+        <div class="mulch-card">
+          <div class="mulch-swatch brown" aria-label="Brown mulch color preview"></div>
+          <div class="mulch-card-body">
+            <h3 class="heading mulch-card-title">Brown Mulch</h3>
+            <p class="mulch-card-desc">The natural choice. A classic earthy tone that blends into any yard seamlessly and holds up through every season.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══ TESTIMONIAL ════════════════════════════════════════════ -->
+  <section id="testimonial" class="section" aria-label="Customer Testimonial">
+    <div class="section-inner">
+      <div class="testimonial-inner">
+        <span class="quote-mark" aria-hidden="true">"</span>
+        <blockquote>
+          <p class="testimonial-text">
+            They handled everything &mdash; called me back the same day, gave me an honest price, and the beds looked incredible when they finished. I didn't have to do a single thing. Worth every dollar.
+          </p>
+          <footer class="testimonial-attr">
+            <span class="attr-line" aria-hidden="true"></span>
+            <div>
+              <div class="attr-name">Kalamazoo Homeowner</div>
+            </div>
+            <span class="attr-line" aria-hidden="true"></span>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══ CTA BANNER ════════════════════════════════════════════ -->
+  <div id="cta-banner" aria-label="Book Now">
+    <div class="cta-banner-inner">
+      <div class="cta-banner-left">
+        <h2 class="heading">Book Now. Limited Spring Availability</h2>
+        <p>Call for your free consultation and custom estimate. Spots fill fast.</p>
+      </div>
+      <a href="tel:2487672479" class="cta-banner-phone">(248) 767-2479</a>
+    </div>
+  </div>
+
+
+  <!-- ══ CONTACT ════════════════════════════════════════════════ -->
+  <section id="contact" class="section" aria-label="Contact">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="label">Contact</span>
+        <span class="label">Book Your Install</span>
+      </div>
+      <div class="contact-grid">
+
+        <!-- Info column -->
+        <div>
+          <h2 class="heading contact-info-head">Ready for fresh mulch?</h2>
+          <p class="contact-info-body">
+            Call us for a free phone consultation and custom quote. We typically respond the same day and can often schedule within the week.
+          </p>
+          <div class="contact-detail">
+            <div class="contact-detail-item">
+              <span class="label">Phone</span>
+              <a href="tel:2487672479" class="contact-phone-big">(248) 767-2479</a>
+            </div>
+            <div class="contact-detail-item">
+              <span class="label">Service Area</span>
+              <span>Kalamazoo, Michigan, Residential Properties</span>
+            </div>
+            <div class="contact-detail-item">
+              <span class="label">Consultation</span>
+              <span>Free. No obligation, no pressure</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form column -->
+        <div>
+          <form
+            action="https://formspree.io/f/[FORMSPREE_ID]"
+            method="POST"
+            novalidate
+          >
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="name">Name</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Alex Johnson"
+                  required
+                  autocomplete="name"
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="email">Email</label>
+                <input
+                  class="form-control"
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="alex@email.com"
+                  required
+                  autocomplete="email"
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="phone">
+                Phone <span class="optional">(best way to reach you)</span>
+              </label>
+              <input
+                class="form-control"
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="(555) 000-0000"
+                autocomplete="tel"
+              />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="address">
+                Address <span class="optional">(optional)</span>
+              </label>
+              <input
+                class="form-control"
+                type="text"
+                id="address"
+                name="address"
+                placeholder="Your Kalamazoo address"
+                autocomplete="street-address"
+              />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="message">Tell Us About Your Yard</label>
+              <textarea
+                class="form-control"
+                id="message"
+                name="message"
+                placeholder="Approximate number of beds, square footage, mulch color preference, ideal timing..."
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn-orange" style="width: 100%; text-align: center; font-size: 0.875rem;">
+              Request My Free Estimate
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══ FOOTER ════════════════════════════════════════════════ -->
+  <footer role="contentinfo">
+    <div class="footer-inner">
+      <a href="#" class="footer-logo" aria-label="K College Mulch home">K College Mulch</a>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="#why">Why Us</a>
+        <a href="#process">Process</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#mulch">Mulch Options</a>
+        <a href="#contact">Book Now</a>
+      </nav>
+      <p class="footer-copy">&copy; <span id="year"></span> K College Mulch &middot; Kalamazoo, Michigan</p>
+    </div>
+  </footer>
+
+  <!-- ══ STICKY MOBILE CALL BUTTON ════════════════════════════ -->
+  <a href="tel:2487672479" class="sticky-call-btn" aria-label="Call K College Mulch">
+    <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M6.5 3C6.5 3 5 4 5 6.5C5 12.299 7.701 15 13.5 15C16 15 17 13.5 17 13.5L14.5 11L13 12.5C13 12.5 10.5 12 8 9.5C5.5 7 5 4.5 5 4.5L6.5 3Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    Call Now &nbsp;&middot;&nbsp; (248) 767-2479
+  </a>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
