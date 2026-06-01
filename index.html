@@ -534,32 +534,11 @@
       border: 1px solid var(--border);
       overflow: hidden;
     }
-    .mulch-swatch {
-      height: 160px;
-      position: relative;
-    }
-    .mulch-swatch.red {
-      background: linear-gradient(160deg, #8B2C14 0%, #A83B22 45%, #6A200E 100%);
-    }
-    .mulch-swatch.black {
-      background: linear-gradient(160deg, #1C1C1C 0%, #2E2E2E 45%, #0D0D0D 100%);
-    }
-    .mulch-swatch.brown {
-      background: linear-gradient(160deg, #5C3D1E 0%, #7A5032 45%, #422C12 100%);
-    }
-
-    /* Subtle texture stripes to simulate mulch texture */
-    .mulch-swatch::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: repeating-linear-gradient(
-        -45deg,
-        transparent,
-        transparent 8px,
-        rgba(0,0,0,0.08) 8px,
-        rgba(0,0,0,0.08) 9px
-      );
+    .mulch-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
     }
 
     .mulch-card-body { padding: 1.5rem 1.75rem; }
@@ -1230,7 +1209,7 @@
       <div class="mulch-grid">
 
         <div class="mulch-card">
-          <div class="mulch-swatch red" aria-label="Red mulch color preview"></div>
+          <img src="Red.JPG" alt="Red mulch" class="mulch-img" />
           <div class="mulch-card-body">
             <h3 class="heading mulch-card-title">Red Mulch</h3>
             <p class="mulch-card-desc">A bold, warm tone that makes garden beds pop against green foliage. A popular choice for front-yard curb appeal.</p>
@@ -1238,7 +1217,7 @@
         </div>
 
         <div class="mulch-card">
-          <div class="mulch-swatch black" aria-label="Black mulch color preview"></div>
+          <img src="Black.JPG" alt="Black mulch" class="mulch-img" />
           <div class="mulch-card-body">
             <h3 class="heading mulch-card-title">Black Mulch</h3>
             <p class="mulch-card-desc">Clean, modern contrast that works with any home exterior. Sets off plants and gives beds a finished, polished look.</p>
@@ -1246,7 +1225,7 @@
         </div>
 
         <div class="mulch-card">
-          <div class="mulch-swatch brown" aria-label="Brown mulch color preview"></div>
+          <img src="Brown.JPG" alt="Brown mulch" class="mulch-img" />
           <div class="mulch-card-body">
             <h3 class="heading mulch-card-title">Brown Mulch</h3>
             <p class="mulch-card-desc">The natural choice. A classic earthy tone that blends into any yard seamlessly and holds up through every season.</p>
